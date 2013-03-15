@@ -1,0 +1,22 @@
+@import "bootstrap";
+body {
+	 padding-top: 20px;
+        padding-bottom: 40px;
+}
+
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+a.btn.btn-primary {
+	margin-top:  0px;
+	height: 22px;
+}
+
+input.btn.btn-large.btn-block.btn-primary {
+	width: 222px;
+}
