@@ -8,6 +8,9 @@ gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'jquery-rails', '2.0.2'
 gem 'devise' , '2.2.3'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'certified'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'

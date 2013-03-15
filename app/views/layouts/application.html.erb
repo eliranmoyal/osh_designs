@@ -5,6 +5,9 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript">if (window.location.href.indexOf('#_=_') > 0) {
+    window.location = window.location.href.replace(/#.*/, '');
+};</script>
 </head>
 <body>
 	<div id="user_nav">
@@ -12,7 +15,8 @@
     Signed in as <%= current_user.email %>. Not you?
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
   <% else %>
-    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %> or just
+    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
   <% end %>
 </div>
 <% flash.each do |key,value|  %>
