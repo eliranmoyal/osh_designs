@@ -1,11 +1,21 @@
 <div class="row">
 	<div class="span6">
-		<h1> Arti Pixel</h1>
+		<h1> ArtiPixel</h1>
 		<p>this is an app to order designs from the designer OSH!</p>
 		<p> this app is brought you by eliran:)</p>
 	</div>
 	<div class="span3">
+		<% if user_signed_in? %>
+		<br>
+		<%= link_to  raw('<i class="icon-envelope icon-white"></i> Create new order now!') ,'#' ,
+		:class => "btn btn-large btn-warning  btn-block" %>
+		<br>
+		<%= link_to raw('<i class="icon-user icon-white"></i> Go To Your Profile!') ,current_user,
+		:class => "btn btn-large btn-block btn-custom" %>
+
+		<% else %>
 		<%= render 'devise/registrations/new' %>
+		<% end %>
 	</div>
 </div>
 

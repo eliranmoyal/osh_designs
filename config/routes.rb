@@ -1,8 +1,10 @@
 OshDesigns::Application.routes.draw do
-  
-  devise_for :users , :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
-  get "pages/about"
+
+  devise_for :users , :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  resources :users, :only => [:show]
+
+   match '/about',    to: 'pages#about'
 
   root :to => 'pages#home'
   # The priority is based upon order of creation:

@@ -15,4 +15,15 @@ module ApplicationHelper
   def resource_class
   	resource.class
   end
+
+  def flash_key_to_alert(key)
+    if key=="notice"
+    result = "info" 
+    elsif key=="alert"
+      result = "error"
+    else
+      result = key
+    end
+      result
+  end
 end

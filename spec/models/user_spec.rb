@@ -1,5 +1,14 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+	describe "users attrirbutes" do
+		before do
+			@user = User.new
+		end
+
+		it "should respond to phone" do
+			@user.should respond_to(:phone)
+		end
+		
+	end
 end

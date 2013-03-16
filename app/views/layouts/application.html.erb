@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OshDesigns</title>
+  <title>ArtiPixel</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <script type="text/javascript">if (window.location.href.indexOf('#_=_') > 0) {
     window.location = window.location.href.replace(/#.*/, '');
-};</script>
+  };</script>
 </head>
 
 <body>
   <div class = "container-narrow">
     <%= render 'layouts/header' %>
-<% flash.each do |key,value|  %>
-					<div class="flash <%= key %>">
-						<%= value %>
-					</div>
-				<% end %>
-<%= yield %>
-</div>
+    <% flash.each do |key,value|  %>
+    <div class="alert alert-<%= flash_key_to_alert(key.to_s) %>">
+      <%= value %>
+    </div>
+    <% end %>
+    <%= yield %>
+  </div>
 
 </body>
 </html>
