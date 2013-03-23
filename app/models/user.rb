@@ -9,6 +9,17 @@ class User < ActiveRecord::Base
   attr_accessible :phone,:email,:name, :password, :password_confirmation, :remember_me , :provider , :uid
   # attr_accessible :title, :body
 
+  VALID_PHONE_REGEX =/((^05[0-9]-[0-9]{7}$)|(^0[1-9]-[0-9]{7}$)|(^05[0-9]{8}$)|(^0[1-9][0-9]{7}$))/
+  validates :name, :presence => true
+
+  validate :check_phone
+
+  def check_phone
+    if !(phone.blank? || phone.nil?) and !(self.phone =~ VALID_PHONE_REGEX)
+      errors.add(:phone, "should look like valid phone number")
+    end
+  end
+
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
@@ -48,4 +59,8 @@ def update_with_password(params,*options)
     super
   end
 end
+
+
+
+
 end
