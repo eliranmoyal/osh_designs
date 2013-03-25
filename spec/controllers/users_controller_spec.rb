@@ -2,17 +2,17 @@ require 'spec_helper'
 
 describe UsersController do
 
+let(:user) { FactoryGirl.create(:user) }
+let(:order1) { FactoryGirl.create(:order , user: user) }
+  
   describe "GET 'show'" do
+    before { visit user_path(user) }
+    
     it "returns http success" do
-      get 'show'
       response.should be_success
     end
-  end
-
-  describe "GET 'edit'" do
-    it "returns http success" do
-      get 'edit'
-      response.should be_success
+    describe "orders" do
+       it { should have_content(order1.description) }
     end
   end
 

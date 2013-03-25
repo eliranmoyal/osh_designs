@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 	def show
 		begin
 			@user = User.find(params[:id])
+			@orders = @user.orders
 		rescue ActiveRecord::RecordNotFound  
 			redirect_to root_path , :alert => "No Such User"
 			return

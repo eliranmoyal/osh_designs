@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130316175323) do
+ActiveRecord::Schema.define(:version => 20130323173034) do
+
+  create_table "orders", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "order_type"
+    t.text     "description"
+    t.string   "state",        :default => "unwatched"
+    t.integer  "price"
+    t.integer  "percentage",   :default => 0
+    t.datetime "expected_end"
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

@@ -8,6 +8,32 @@
   <script type="text/javascript">if (window.location.href.indexOf('#_=_') > 0) {
     window.location = window.location.href.replace(/#.*/, '');
   };</script>
+
+  <script type="text/javascript">
+<!--
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       var b = document.getElementById("buttonimg");
+       if(e.style.display == 'block'){
+          e.style.display = 'none';
+        }
+       else{
+          e.style.display = 'block';
+        }
+    }
+
+    function change_arrow(id) {
+       var e = document.getElementById(id);
+       if(e.src.indexOf("right") !== -1 ){
+          e.src = "/assets/down.png";
+        }
+       else{
+                    e.src = "/assets/right.png";
+        }
+    }
+//-->
+</script>
+
 </head>
 
 <body>

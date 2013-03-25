@@ -7,8 +7,9 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :phone,:email,:name, :password, :password_confirmation, :remember_me , :provider , :uid
-  # attr_accessible :title, :body
-
+  
+  #orders
+has_many :orders, dependent: :destroy
   VALID_PHONE_REGEX =/((^05[0-9]-[0-9]{7}$)|(^0[1-9]-[0-9]{7}$)|(^05[0-9]{8}$)|(^0[1-9][0-9]{7}$))/
   validates :name, :presence => true
 

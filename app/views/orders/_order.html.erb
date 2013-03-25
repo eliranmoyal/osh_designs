@@ -1,0 +1,26 @@
+ <li>
+ 	<div class="order">
+ 		<p><b><%= order.description %></b>
+ 		<a href="#" onclick="toggle_visibility('more-info<%= order.id %>');change_arrow('buttonimg<%= order.id %>');">
+ 			<%= image_tag("right.png", alt: "more-info",size:"18x18",:id=>"buttonimg#{order.id}") %>
+ 		</a>
+ 		 </p>
+ 		<div id="more-info<%= order.id %>" style="display:none">
+ 			State : <%= order.state %>
+ 			<br>
+ 			Estimated Finshed : <%= order.expected_end.nil? ? "Unknown" : order.expected_end%>
+ 			<br>
+ 			Type: <%= order.order_type %>
+ 			<br>
+ 			Price: <%= order.price %>
+ 			<br>
+ 			Order ID : <%= order.id %>
+ 		</div>
+ 		
+ 		<div class="progress progress-striped">
+ 			<div class="bar bar-success" style="width: <%= order.state != "unwatched" ? order.percentage  : 0%>%;"></div>
+ 			<div class="bar bar-warning" style="width: <%= order.state != "unwatched" ? 100-order.percentage  : 0%>%;"></div>
+ 			<div class="bar bar-danger" style="width: <%= order.state == "unwatched" ? 100  : 0%>%;"></div>
+ 		</div>
+ 	</div>
+ </li>
