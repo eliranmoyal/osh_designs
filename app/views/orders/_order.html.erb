@@ -1,20 +1,30 @@
  <li>
  	<div class="order">
- 		<p><b><%= order.description %></b>
- 		<a href="#" onclick="toggle_visibility('more-info<%= order.id %>');change_arrow('buttonimg<%= order.id %>');">
- 			<%= image_tag("right.png", alt: "more-info",size:"18x18",:id=>"buttonimg#{order.id}") %>
- 		</a>
- 		 </p>
+ 		<p><b><%= order.title %></b>
+ 			<a href="#" onclick="toggle_visibility('more-info<%= order.id %>');change_arrow('buttonimg<%= order.id %>');">
+ 				<%= image_tag("right.png", alt: "more-info",size:"18x18",:id=>"buttonimg#{order.id}") %>
+ 			</a>
+ 			<% if current_user  == order.user %>
+	 			<%= link_to "DE", order, method: :delete,
+	 			data: { confirm: 'You sure?' },
+	 			title: order.title , class:"trash" %>
+ 			<% end %>
+ 		</p>
+
  		<div id="more-info<%= order.id %>" style="display:none">
- 			State : <%= order.state %>
+ 			<b>State</b> : <%= order.state %>
  			<br>
- 			Estimated Finshed : <%= order.expected_end.nil? ? "Unknown" : order.expected_end%>
+ 			<b> Estimated Finshed </b>: <%= order.expected_end.nil? ? "Unknown" : order.expected_end%>
  			<br>
- 			Type: <%= order.order_type %>
+ 			<b>Type</b>: <%= order.order_type %>
  			<br>
- 			Price: <%= order.price %>
+ 			<b>Price</b>: <%= order.price %>
  			<br>
- 			Order ID : <%= order.id %>
+ 			<b>Order ID </b>: <%= order.id %>
+ 			<br>
+ 			<b>Description</b>: 
+ 			<br>
+ 			<%= order.description %>
  		</div>
  		
  		<div class="progress progress-striped">

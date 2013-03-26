@@ -3,7 +3,7 @@ OshDesigns::Application.routes.draw do
 
   devise_for :users , :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :users, :only => [:show]
-
+  resources :orders , :only => [:create , :edit , :destroy,:new]
    match '/about',    to: 'pages#about'
 
   root :to => 'pages#home'

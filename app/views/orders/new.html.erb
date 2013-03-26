@@ -1,0 +1,56 @@
+
+<div class="span5">
+	<h1>Create New Order</h1>
+	<br>
+	<%= form_for(@order) do |f| %>
+	<%= f.text_field :title, placeholder: "Title your order (i.e very large logo)" %>
+	<br>
+	<p><b> Choose The Order Type</b></p>
+	<%= f.select :order_type, ["Banner" , "Logo" ,  "Web Site"] %>
+	<br>
+	<%= f.text_area :description, placeholder: "Description of the order" , :id => "orderDescription"%>
+	<br>
+	<%= f.submit "Order", class: "btn btn-large btn-warning  btn-block" %>
+	<% end %>
+</div>
+
+<div class="span 3 offset1">
+	
+	<div class="row order_types round">
+		<h2> Order Types</h2>
+		<div class="info_order">
+			<div class="title"><b>Banner</b></div>
+			<div class="info_order_info">
+				Price Range : 100-250
+			</div>
+			<div class="info_order_info">
+				Work Days : 1-2
+			</div>
+
+		</div>
+		<br>
+		<div class="info_order">
+			<div class="title"><b>Logo</b></div>
+			<div class="info_order_info">
+				Price Range : 300-500
+			</div>
+			<div class="info_order_info">
+				Work Days : 2-4 
+				
+			</div>
+		</div>
+		<br>
+		<div class="info_order">
+			<div class="title"><b>Web Site</b></div>
+			<div class="info_order_info">
+				Price Range : 1000-1500
+			</div>
+			<div class="info_order_info">
+				Work Days : 7-14
+			</div>
+		</div>
+		
+
+
+	</div>
+</div>

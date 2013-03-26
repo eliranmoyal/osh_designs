@@ -12,7 +12,8 @@ describe Order do
   it { should respond_to(:percentage) }
   it { should respond_to(:price) }
   it { should respond_to(:state) }
-  it { should respond_to(:type) }
+  it { should respond_to(:order_type) }
+  it { should respond_to(:title) }
   it { should respond_to(:user_id) }
   it { should respond_to(:user) }
   its(:user) { should == user }

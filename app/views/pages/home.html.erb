@@ -7,7 +7,7 @@
 	<div class="span3">
 		<% if user_signed_in? %>
 		<br>
-		<%= link_to  raw('<i class="icon-envelope icon-white"></i> Create new order now!') ,'#' ,
+		<%= link_to  raw('<i class="icon-envelope icon-white"></i> Create new order now!') ,new_order_path ,
 		:class => "btn btn-large btn-warning  btn-block" %>
 		<br>
 		<%= link_to raw('<i class="icon-user icon-white"></i> Go To Your Profile!') ,current_user,
