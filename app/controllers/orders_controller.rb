@@ -37,7 +37,7 @@ class OrdersController < ApplicationController
 
     def should_have_phone
       if (current_user.phone.nil? || current_user.phone.blank?) 
-        flash[:notice] = "You Need To Enter Valid Phone In Order To Be Registerd"
+        flash[:notice] = "You Need To Enter Valid Phone In Order To Create Orders"
         redirect_to edit_user_registration_path(current_user)
       end
     end
