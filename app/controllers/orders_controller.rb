@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
     
    before_filter :authenticate_user! 
+   before_filter :should_have_phone , only: [:new,:create]
    before_filter :correct_user,   only: :destroy
 
    def create
@@ -32,5 +33,12 @@ class OrdersController < ApplicationController
     def correct_user
       @order = current_user.orders.find_by_id(params[:id])
       redirect_to root_url if @order.nil?
+    end
+
+    def should_have_phone
+      if (current_user.phone.nil? || current_user.phone.blank?) 
+        flash[:notice] = "You Need To Enter Valid Phone In Order To Be Registerd"
+        redirect_to edit_user_registration_path(current_user)
+      end
     end
 end
