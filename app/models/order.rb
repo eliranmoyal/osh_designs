@@ -4,4 +4,6 @@ class Order < ActiveRecord::Base
 	validates :user_id, presence: true
 
 	 default_scope order: 'orders.created_at'
+	 scope :in_progress  , where("orders.state ='in progress' ")
+	 scope :unwatched  , where("orders.state ='unwatched' ")
 end
