@@ -115,7 +115,7 @@ ActiveAdmin.setup do |config|
   #
   # Enable and disable Batch Actions
   #
-  config.batch_actions = true
+  config.batch_actions = false
 
 
   # == Controller Filters
@@ -140,6 +140,7 @@ ActiveAdmin.setup do |config|
   #
   # To load a javascript file:
   #   config.register_javascript 'my_javascript.js'
+  # config.register_javascript 'http://code.jquery.com/jquery-1.6.4.min.js'
 
 
   # == CSV options

@@ -7,12 +7,25 @@ scope :all, :default => true
 scope :unwatched
 scope :in_progress
 
- # member_action :lock, :method => :put do
- #      user = User.find(params[:id])
- #      user.lock!
- #      redirect_to {:action => :show}, :notice => "Locked!"
- #    end
+ member_action :change, :method => :post do
+      order = Order.find(params[:id])
+      File.open("test.text", "w") { |file| file.puts params.inspect  }
+      order.update_attributes(params[:order])
+      redirect_to admin_orders_path
+    end
 
+    index do
+    	column :title
+    	column :id
+    	column :state
+    	column "ordered by" do |order|
+    		order.user.name
+    	end
+    	column "Actions" do |order|
+		render  'admins/order_actions' , :order => order
+    	end
+    	
+    end
 
 #override controller
 controller do
@@ -27,6 +40,11 @@ controller do
       	else
       		redirect_to root_url
       	end
+      end
+      def update
+      	@order = Order.find(params[:id])
+      	@order.update_attributes(params[:order])
+      	redirect_to admin_orders_path 
       end
   end
 
@@ -46,5 +64,8 @@ controller do
   	end
   	f.buttons
   end
+
+
+
 
 end
