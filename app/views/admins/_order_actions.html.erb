@@ -1,5 +1,5 @@
-<%= link_to "edit", edit_admin_order_path(order) %>
-<%= link_to "change", "#login-box#{order.id}", :class=>"login-window" %>
+<%= link_to "Edit", edit_admin_order_path(order) %>
+<%= link_to "Change State", "#login-box#{order.id}", :class=>"login-window" %>
 <%= link_to(I18n.t('active_admin.delete'), resource_path(order), :method => :delete, :data => {:confirm => I18n.t('active_admin.delete_confirmation')}, :class => "member_link delete_link") %>
 <div id="login-box<%= order.id %>" class="login-popup">
     <a href="#" class="close"><img src="/assets/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>>

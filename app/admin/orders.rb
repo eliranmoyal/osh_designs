@@ -1,25 +1,40 @@
 ActiveAdmin.register Order do
 	# add filters
-	filter :state  , :as => :select , :collection => ["unwatched","in progress"]
+  
+  def order_types
+    ["Logo","Banner", "Web Site"]
+  end
+
+	filter :order_type  , :as => :select , :collection => order_types
+  filter :price 
+  filter :percentage
+  filter :expected_end
+  filter :title
 
 # add scopes
 scope :all, :default => true
 scope :unwatched
 scope :in_progress
 
- member_action :change, :method => :post do
-      order = Order.find(params[:id])
-      File.open("test.text", "w") { |file| file.puts params.inspect  }
-      order.update_attributes(params[:order])
-      redirect_to admin_orders_path
-    end
 
     index do
-    	column :title
-    	column :id
+      column :id 
+    	
+      column "Title" , :sortable => :title do |order|
+        link_to order.title , resource_path(order) 
+      end
+
+    	column :order_type
     	column :state
-    	column "ordered by" do |order|
-    		order.user.name
+      column "Price" ,:sortable => :price do |order|
+        number_to_currency order.price , :unit =>  "&#8362;"
+      end
+      column "Progress" , :sortable => :percentage do |order|
+        "#{order.percentage}%"
+      end
+      column "Estimated Finshed",:expected_end
+    	column "ordered by" , :sortable => :user_id do |order|
+    		link_to order.user.name, resource_path(order.user)
     	end
     	column "Actions" do |order|
 		render  'admins/order_actions' , :order => order

@@ -26,4 +26,8 @@ module ApplicationHelper
     end
       result
   end
+
+  def order_types
+    ["Logo","Banner", "Web Site"]
+  end
 end
