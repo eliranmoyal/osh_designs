@@ -34,7 +34,7 @@ scope :in_progress
       end
       column "Estimated Finshed",:expected_end
     	column "ordered by" , :sortable => :user_id do |order|
-    		link_to order.user.name, resource_path(order.user)
+    		link_to order.user.name, admin_user_path(order.user)
     	end
     	column "Actions" do |order|
 		render  'admins/order_actions' , :order => order
