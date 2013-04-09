@@ -27,7 +27,7 @@ ActiveAdmin.register User do
 		column "In Debt Of" do |user|
 			sum_not_paid = user.orders.select{|order| order.state != "paid" && order.price !=nil}
 							.sum{|order| order.price}
-							
+
 			number_to_currency sum_not_paid, :unit =>  "&#8362;"	
 		end
 		column "Joined At " , :created_at
@@ -35,20 +35,27 @@ ActiveAdmin.register User do
 	end
 
 	show :title => :name do
-		panel "Order History" do
+		panel "Orders" do
 			table_for(user.orders) do
 				column :id 
 				column("Order", :sortable => :title) {|order| link_to "#{order.title}", admin_order_path(order) }
 				column("State")                   {|order| status_tag(order.state) }
+				column("Date Orderd" , :created_at,:sortable =>:created_at) 
 				# column("Date", :sortable => :checked_out_at){|order| pretty_format(order.checked_out_at) }
-				column("Total")                   {|order| number_to_currency order.price , :unit =>  "&#8362;"}
+				column("Price")                   {|order| number_to_currency order.price , :unit =>  "&#8362;"}
 			end
 		end
 		active_admin_comments
 	end
 
 	sidebar "Customer Details", :only => :show do
-		attributes_table_for user, :name, :email, :phone ,:created_at
+		attributes_table_for user do 
+			row("Name") {user.name}
+			row("Email") {user.email}
+			if user.provider == "facebook"
+				row("Facebook") {link_to user.name, "http://www.facebook.com/#{user.uid}"}
+			end
+		end
 	end
 
 	sidebar "Order History", :only => :show do

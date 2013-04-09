@@ -80,7 +80,25 @@ controller do
    f.buttons
  end
 
+ show :title => :title do
+  panel "Order Details" do
+   attributes_table_for order do
+     # row :id
+     row :title
+     row("Ordered By ") {link_to order.user.name, admin_user_path(order.user)}
+     row("State") {status_tag(order.state) }
+     row ("Percentage") {"#{order.percentage}%"}
+     row ("Price") { number_to_currency order.price , :unit =>  "&#8362;"}
+     row ("Estimated Finish") {order.expected_end}
+     row ("Orderd At") {order.created_at}
+     row :updated_at
+     row :description
 
+
+   end
+ end
+ active_admin_comments
+end
 
 
 end
