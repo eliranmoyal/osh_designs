@@ -9,14 +9,20 @@ class Order < ActiveRecord::Base
 	scope :unwatched  , where("orders.state ='unwatched' ")
 	scope :completed  , where("orders.state ='completed' ")
 	scope :paid  , where("orders.state ='paid' ")
+	scope :unpaid , where("orders.state !='paid' ")
+
+
+	def self.total_on(date)
+		where("date(created_at) = ?",date).sum(:price)
+	end
 
 	private
 
-		def mass_assignment_authorizer(role = :default)
-			if accessible == :all
-				self.class.protected_attributes
-			else
-				super + (accessible || [])
-			end
+	def mass_assignment_authorizer(role = :default)
+		if accessible == :all
+			self.class.protected_attributes
+		else
+			super + (accessible || [])
 		end
+	end
 end
