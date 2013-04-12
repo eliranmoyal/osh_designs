@@ -15,6 +15,8 @@ ActiveAdmin.register Order do
 scope :all, :default => true
 scope :unwatched
 scope :in_progress
+scope :completed
+scope :paid
 
 
 index do
@@ -25,7 +27,9 @@ index do
   end
 
   column :order_type
-  column :state
+  column "State" , :sortable => :state do |order|
+      status_tag(order.state)
+  end
   column "Price" ,:sortable => :price do |order|
     number_to_currency order.price , :unit =>  "&#8362;"
   end
@@ -72,7 +76,7 @@ controller do
        f.input :description 
 
      end
-     f.input :state , :collection =>  ["unwatched","in progress","completed"]
+     f.input :state , :collection =>  ["unwatched","in progress","completed","paid"]
      f.input :expected_end ,:label => "When Will I Finish It" , :as => :date_select
      f.input :percentage
      f.input :price
@@ -88,7 +92,7 @@ controller do
      row("Ordered By ") {link_to order.user.name, admin_user_path(order.user)}
      row("State") {status_tag(order.state) }
      row ("Percentage") {"#{order.percentage}%"}
-     row ("Price") { number_to_currency order.price , :unit =>  "&#8362;"}
+     row ("Price") { number_to_currency order.price , :unit =>  "&#8362;" }
      row ("Estimated Finish") {order.expected_end}
      row ("Orderd At") {order.created_at}
      row :updated_at

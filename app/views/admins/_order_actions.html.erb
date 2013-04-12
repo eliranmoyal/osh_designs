@@ -4,7 +4,7 @@
 <div id="login-box<%= order.id %>" class="login-popup">
     <a href="#" class="close"><img src="/assets/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>>
     <%= form_for order ,:url => "/admin/orders/#{order.id}" ,:class=> "signin" do |f| %>
-    <%= f.select :state, ["unwatched" , "in progress" ] %>
+    <%= f.select :state, ["unwatched" , "in progress" ,"completed" , "paid"] %>
     <%= f.submit "Change" %>
     <% end %>  
 </div>

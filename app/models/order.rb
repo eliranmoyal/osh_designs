@@ -7,6 +7,8 @@ class Order < ActiveRecord::Base
 	default_scope order: 'orders.created_at'
 	scope :in_progress  , where("orders.state ='in progress' ")
 	scope :unwatched  , where("orders.state ='unwatched' ")
+	scope :completed  , where("orders.state ='completed' ")
+	scope :paid  , where("orders.state ='paid' ")
 
 	private
 
