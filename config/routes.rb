@@ -1,6 +1,6 @@
 OshDesigns::Application.routes.draw do
 
-
+root :to => 'pages#home'
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -10,7 +10,7 @@ OshDesigns::Application.routes.draw do
   resources :orders , :only => [:create , :edit , :destroy,:new]
    match '/about',    to: 'pages#about'
 
-  root :to => 'pages#home'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
