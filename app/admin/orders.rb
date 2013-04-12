@@ -22,6 +22,10 @@ scope :paid
 index do
   column :id 
 
+column "Order Date" ,:sortable => :created_at do |order|
+  order.created_at.strftime(" %d/%m/%Y")
+end
+
   column "Title" , :sortable => :title do |order|
     link_to order.title , resource_path(order) 
   end
@@ -36,7 +40,15 @@ index do
   column "Progress" , :sortable => :percentage do |order|
     "#{order.percentage}%"
   end
-  column "Estimated Finshed",:expected_end
+  column "Estimated Finsh",:sortable => :expected_end do |order|
+    if order.expected_end.nil?
+      nil
+    else
+    order.expected_end.strftime(" %d/%m/%Y")  
+    end
+    
+  end
+
   column "ordered by" , :sortable => :user_id do |order|
     link_to order.user.name, admin_user_path(order.user)
   end
@@ -72,7 +84,7 @@ controller do
       if f.object.new_record?
        f.input :user
        f.input :title
-       f.input :order_type 
+       f.input :order_type , :as => :select,      :collection => order_types
        f.input :description 
 
      end
