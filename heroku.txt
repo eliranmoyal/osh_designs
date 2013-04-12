@@ -1,101 +1,102 @@
-2013-04-12T16:03:34.282195+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
-2013-04-12T16:03:34.284709+00:00 heroku[router]: at=info method=GET path=/ host=osh-designs.herokuapp.com fwd="85.65.217.107" dyno=web.1 connect=0ms service=8ms status=404 bytes=728
-2013-04-12T16:03:34.282195+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
-2013-04-12T16:03:34.282418+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
-2013-04-12T16:03:34.282867+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
-2013-04-12T16:03:34.282418+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-2013-04-12T16:03:34.282418+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
-2013-04-12T16:03:34.282649+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
-2013-04-12T16:03:34.282867+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
-2013-04-12T16:03:34.282867+00:00 app[web.1]:   /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-2013-04-12T16:03:34.282649+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
-2013-04-12T16:03:34.282649+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
-2013-04-12T16:03:34.282867+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/log_tailer.rb:17:in `call'
-2013-04-12T16:03:34.282195+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
-2013-04-12T16:03:34.282195+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `_run__4090404384285270800__call__582571005633304415__callbacks'
-2013-04-12T16:03:34.282649+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
-2013-04-12T16:03:34.282195+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/head.rb:14:in `call'
-2013-04-12T16:03:34.282195+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
-2013-04-12T16:03:34.282649+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
-2013-04-12T16:03:34.282195+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/cookies.rb:341:in `call'
-2013-04-12T16:03:34.282418+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `__run_callback'
-2013-04-12T16:03:34.282867+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
-2013-04-12T16:03:34.282195+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-2013-04-12T16:03:34.282418+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
-2013-04-12T16:03:34.282867+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
-2013-04-12T16:03:34.282867+00:00 app[web.1]:   /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
-2013-04-12T16:03:34.282649+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
-2013-04-12T16:03:34.282649+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
-2013-04-12T16:03:34.282867+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
-2013-04-12T16:03:34.282649+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
-2013-04-12T16:03:34.282867+00:00 app[web.1]:   /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-2013-04-12T16:03:34.283089+00:00 app[web.1]: 
-2013-04-12T16:03:34.282649+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
-2013-04-12T16:03:34.282867+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
-2013-04-12T16:03:34.283089+00:00 app[web.1]: 
-2013-04-12T16:02:49.429326+00:00 heroku[router]: at=info method=GET path=/pages/home host=osh-designs.herokuapp.com fwd="85.65.217.107" dyno=web.1 connect=1ms service=8ms status=404 bytes=728
-2013-04-12T16:05:01.892835+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/inflector/methods.rb:230:in `block in constantize'
-2013-04-12T16:05:01.892835+00:00 app[web.1]: ActionController::RoutingError (uninitialized constant DashboardController):
-2013-04-12T16:05:01.885707+00:00 app[web.1]: Started GET "/" for 85.65.217.107 at 2013-04-12 16:05:01 +0000
-2013-04-12T16:05:01.892835+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/inflector/methods.rb:229:in `each'
-2013-04-12T16:05:01.892835+00:00 app[web.1]: 
-2013-04-12T16:05:01.892835+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
-2013-04-12T16:05:01.892835+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/inflector/methods.rb:229:in `constantize'
-2013-04-12T16:05:01.892835+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
-2013-04-12T16:05:01.892835+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
-2013-04-12T16:05:01.892835+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:54:in `controller'
-2013-04-12T16:05:01.892835+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:32:in `call'
-2013-04-12T16:05:01.893373+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/flash.rb:242:in `call'
-2013-04-12T16:05:01.893149+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/warden-1.2.1/lib/warden/manager.rb:34:in `catch'
-2013-04-12T16:05:01.893149+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/warden-1.2.1/lib/warden/manager.rb:34:in `call'
-2013-04-12T16:05:01.893373+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
-2013-04-12T16:05:01.893149+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/omniauth-1.1.3/lib/omniauth/strategy.rb:177:in `call!'
-2013-04-12T16:05:01.893149+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
-2013-04-12T16:05:01.893149+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
-2013-04-12T16:05:01.893149+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:601:in `call'
-2013-04-12T16:05:01.893149+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
-2013-04-12T16:05:01.893149+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/omniauth-1.1.3/lib/omniauth/strategy.rb:157:in `call'
-2013-04-12T16:05:01.893149+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
-2013-04-12T16:05:01.893149+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
-2013-04-12T16:05:01.893373+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
-2013-04-12T16:05:01.893373+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
-2013-04-12T16:05:01.893373+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
-2013-04-12T16:05:01.893600+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `__run_callback'
-2013-04-12T16:05:01.893373+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/head.rb:14:in `call'
-2013-04-12T16:05:01.893373+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `_run__4090404384285270800__call__582571005633304415__callbacks'
-2013-04-12T16:05:01.893373+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-2013-04-12T16:05:01.893373+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activerecord-3.2.12/lib/active_record/query_cache.rb:64:in `call'
-2013-04-12T16:05:01.893600+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
-2013-04-12T16:05:01.894005+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
-2013-04-12T16:05:01.893600+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
-2013-04-12T16:05:01.893600+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
-2013-04-12T16:05:01.894005+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
-2013-04-12T16:05:01.893600+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-2013-04-12T16:05:01.893373+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/cookies.rb:341:in `call'
-2013-04-12T16:05:01.894005+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
-2013-04-12T16:05:01.894005+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
-2013-04-12T16:05:01.893600+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
-2013-04-12T16:05:01.893600+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
-2013-04-12T16:05:01.894005+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
-2013-04-12T16:05:01.894005+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
-2013-04-12T16:05:01.893819+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
-2013-04-12T16:05:01.893600+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
-2013-04-12T16:05:01.893600+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
-2013-04-12T16:05:01.894231+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
-2013-04-12T16:05:01.894005+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
-2013-04-12T16:05:01.893600+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
-2013-04-12T16:05:01.894231+00:00 app[web.1]:   /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-2013-04-12T16:05:01.894005+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
-2013-04-12T16:05:01.894005+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
-2013-04-12T16:05:01.894231+00:00 app[web.1]:   /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-2013-04-12T16:05:01.894005+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
-2013-04-12T16:05:01.894231+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
-2013-04-12T16:05:01.894231+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
-2013-04-12T16:05:01.894231+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
-2013-04-12T16:05:01.894231+00:00 app[web.1]:   /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
-2013-04-12T16:05:01.894231+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
-2013-04-12T16:05:01.894441+00:00 app[web.1]: 
-2013-04-12T16:05:01.894231+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/log_tailer.rb:17:in `call'
-2013-04-12T16:05:01.894231+00:00 app[web.1]: 
-2013-04-12T16:05:02.898513+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=osh-designs.herokuapp.com fwd="85.65.217.107" dyno=web.1 connect=1ms service=58ms status=304 bytes=0
-2013-04-12T16:05:01.896776+00:00 heroku[router]: at=info method=GET path=/ host=osh-designs.herokuapp.com fwd="85.65.217.107" dyno=web.1 connect=1ms service=15ms status=404 bytes=728
+2013-04-12T16:44:55.888043+00:00 heroku[run.8987]: State changed from starting to up
+2013-04-12T16:45:58.907571+00:00 heroku[run.8987]: Client connection closed. Sending SIGHUP to all processes
+2013-04-12T16:46:00.034872+00:00 heroku[run.8987]: State changed from up to complete
+2013-04-12T16:46:00.014212+00:00 heroku[run.8987]: Process exited with status 1
+2013-04-12T16:46:08.662456+00:00 app[web.1]: Started GET "/admin" for 85.65.217.107 at 2013-04-12 16:46:08 +0000
+2013-04-12T16:46:08.762495+00:00 app[web.1]: ActionView::Template::Error (PGError: ERROR:  column "orders.created_at" must appear in the GROUP BY clause or be used in an aggregate function
+2013-04-12T16:46:08.762495+00:00 app[web.1]:     14:     	pointInterval: <%= 1.day * 1000 %>,
+2013-04-12T16:46:08.762826+00:00 app[web.1]:   app/views/admins/_order_chart.html.erb:16:in `block in _app_views_admins__order_chart_html_erb___821892737296321810_42960900'
+2013-04-12T16:46:08.762826+00:00 app[web.1]:   app/views/admins/_order_chart.html.erb:12:in `each'
+2013-04-12T16:46:08.762495+00:00 app[web.1]: 
+2013-04-12T16:46:08.762495+00:00 app[web.1]:     16:       data: <%= orders_chart_series(orders,1.month.ago.at_midnight)%>
+2013-04-12T16:46:08.763053+00:00 app[web.1]: 
+2013-04-12T16:46:08.762495+00:00 app[web.1]: LINE 1: SELECT created_at, sum(price) as price FROM "orders"  WHERE ...
+2013-04-12T16:46:08.764157+00:00 app[web.1]: Processing by Admin::DashboardController#index as HTML
+2013-04-12T16:46:08.762495+00:00 app[web.1]:     15:       pointStart: <%= 1.month.ago.at_midnight.to_i * 1000 %>,
+2013-04-12T16:46:08.762826+00:00 app[web.1]:   app/helpers/orders_helper.rb:7:in `orders_chart_series'
+2013-04-12T16:46:08.762826+00:00 app[web.1]:   app/views/admins/_order_chart.html.erb:12:in `_app_views_admins__order_chart_html_erb___821892737296321810_42960900'
+2013-04-12T16:46:08.762826+00:00 app[web.1]:   app/admin/dashboard.rb:15:in `block (6 levels) in <top (required)>'
+2013-04-12T16:46:08.763053+00:00 app[web.1]:   app/admin/dashboard.rb:14:in `block (5 levels) in <top (required)>'
+2013-04-12T16:46:08.764157+00:00 app[web.1]:   Rendered admins/_order_chart.html.erb (50.4ms)
+2013-04-12T16:46:08.764157+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/activeadmin-0.6.0/app/views/active_admin/page/index.html.arb (75.3ms)
+2013-04-12T16:46:08.764157+00:00 app[web.1]: Completed 500 Internal Server Error in 91ms
+2013-04-12T16:46:08.762826+00:00 app[web.1]:   app/helpers/orders_helper.rb:7:in `each'
+2013-04-12T16:46:08.762495+00:00 app[web.1]: : SELECT created_at, sum(price) as price FROM "orders"  WHERE (orders.state !='paid' ) AND ("orders"."created_at" BETWEEN '2013-03-12 00:00:00.000000' AND '2013-04-12 23:59:59.999999') GROUP BY date(created_at) ORDER BY orders.created_at):
+2013-04-12T16:46:08.762826+00:00 app[web.1]:     18:     <% end %>
+2013-04-12T16:46:08.762495+00:00 app[web.1]:     13:     	name: "<%= name %>",
+2013-04-12T16:46:08.762826+00:00 app[web.1]:     19: 
+2013-04-12T16:46:08.762495+00:00 app[web.1]:     17:     },
+2013-04-12T16:46:08.762826+00:00 app[web.1]:   app/helpers/orders_helper.rb:7:in `map'
+2013-04-12T16:46:08.763053+00:00 app[web.1]:   app/admin/dashboard.rb:13:in `block (4 levels) in <top (required)>'
+2013-04-12T16:46:08.763053+00:00 app[web.1]:   app/admin/dashboard.rb:12:in `block (3 levels) in <top (required)>'
+2013-04-12T16:46:08.763053+00:00 app[web.1]:   app/admin/dashboard.rb:9:in `block (2 levels) in <top (required)>'
+2013-04-12T16:46:08.762495+00:00 app[web.1]:                ^
+2013-04-12T16:46:08.763053+00:00 app[web.1]: 
+2013-04-12T16:46:08.762826+00:00 app[web.1]:   app/helpers/orders_helper.rb:8:in `block in orders_chart_series'
+2013-04-12T16:46:08.789677+00:00 heroku[router]: at=info method=GET path=/admin host=osh-designs.herokuapp.com fwd="85.65.217.107" dyno=web.1 connect=1ms service=141ms status=500 bytes=643
+2013-04-12T16:46:09.094317+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=osh-designs.herokuapp.com fwd="85.65.217.107" dyno=web.1 connect=0ms service=10ms status=304 bytes=0
+2013-04-12T16:46:10.772828+00:00 app[web.1]: Started GET "/admin" for 85.65.217.107 at 2013-04-12 16:46:10 +0000
+2013-04-12T16:46:10.792596+00:00 app[web.1]: ActionView::Template::Error (PGError: ERROR:  column "orders.created_at" must appear in the GROUP BY clause or be used in an aggregate function
+2013-04-12T16:46:10.792596+00:00 app[web.1]: LINE 1: SELECT created_at, sum(price) as price FROM "orders"  WHERE ...
+2013-04-12T16:46:10.792596+00:00 app[web.1]:                ^
+2013-04-12T16:46:10.792596+00:00 app[web.1]: 
+2013-04-12T16:46:10.792596+00:00 app[web.1]:     16:       data: <%= orders_chart_series(orders,1.month.ago.at_midnight)%>
+2013-04-12T16:46:10.792596+00:00 app[web.1]:     13:     	name: "<%= name %>",
+2013-04-12T16:46:10.792919+00:00 app[web.1]:   app/helpers/orders_helper.rb:7:in `each'
+2013-04-12T16:46:10.792919+00:00 app[web.1]:     18:     <% end %>
+2013-04-12T16:46:10.792919+00:00 app[web.1]:   app/views/admins/_order_chart.html.erb:12:in `each'
+2013-04-12T16:46:10.792596+00:00 app[web.1]:     14:     	pointInterval: <%= 1.day * 1000 %>,
+2013-04-12T16:46:10.795118+00:00 heroku[router]: at=info method=GET path=/admin host=osh-designs.herokuapp.com fwd="85.65.217.107" dyno=web.1 connect=1ms service=26ms status=500 bytes=643
+2013-04-12T16:46:10.792596+00:00 app[web.1]:     15:       pointStart: <%= 1.month.ago.at_midnight.to_i * 1000 %>,
+2013-04-12T16:46:10.792919+00:00 app[web.1]:   app/views/admins/_order_chart.html.erb:16:in `block in _app_views_admins__order_chart_html_erb___821892737296321810_42960900'
+2013-04-12T16:46:10.792596+00:00 app[web.1]: : SELECT created_at, sum(price) as price FROM "orders"  WHERE (orders.state !='paid' ) AND ("orders"."created_at" BETWEEN '2013-03-12 00:00:00.000000' AND '2013-04-12 23:59:59.999999') GROUP BY date(created_at) ORDER BY orders.created_at):
+2013-04-12T16:46:10.792919+00:00 app[web.1]:     19: 
+2013-04-12T16:46:10.792919+00:00 app[web.1]:   app/helpers/orders_helper.rb:7:in `orders_chart_series'
+2013-04-12T16:46:10.792919+00:00 app[web.1]:   app/helpers/orders_helper.rb:8:in `block in orders_chart_series'
+2013-04-12T16:46:10.792596+00:00 app[web.1]:     17:     },
+2013-04-12T16:46:10.792919+00:00 app[web.1]:   app/helpers/orders_helper.rb:7:in `map'
+2013-04-12T16:46:10.792919+00:00 app[web.1]:   app/views/admins/_order_chart.html.erb:12:in `_app_views_admins__order_chart_html_erb___821892737296321810_42960900'
+2013-04-12T16:46:10.792919+00:00 app[web.1]:   app/admin/dashboard.rb:15:in `block (6 levels) in <top (required)>'
+2013-04-12T16:46:10.793143+00:00 app[web.1]:   app/admin/dashboard.rb:9:in `block (2 levels) in <top (required)>'
+2013-04-12T16:46:10.793143+00:00 app[web.1]: 
+2013-04-12T16:46:10.793143+00:00 app[web.1]:   app/admin/dashboard.rb:13:in `block (4 levels) in <top (required)>'
+2013-04-12T16:46:10.793143+00:00 app[web.1]:   app/admin/dashboard.rb:14:in `block (5 levels) in <top (required)>'
+2013-04-12T16:46:10.793143+00:00 app[web.1]:   app/admin/dashboard.rb:12:in `block (3 levels) in <top (required)>'
+2013-04-12T16:46:10.793143+00:00 app[web.1]: 
+2013-04-12T16:46:10.793288+00:00 app[web.1]: Processing by Admin::DashboardController#index as HTML
+2013-04-12T16:46:10.793288+00:00 app[web.1]:   Rendered admins/_order_chart.html.erb (3.6ms)
+2013-04-12T16:46:10.793288+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/activeadmin-0.6.0/app/views/active_admin/page/index.html.arb (11.5ms)
+2013-04-12T16:46:10.793288+00:00 app[web.1]: Completed 500 Internal Server Error in 14ms
+2013-04-12T16:46:11.865318+00:00 app[web.1]: Started GET "/admin" for 85.65.217.107 at 2013-04-12 16:46:11 +0000
+2013-04-12T16:46:11.908081+00:00 app[web.1]: ActionView::Template::Error (PGError: ERROR:  column "orders.created_at" must appear in the GROUP BY clause or be used in an aggregate function
+2013-04-12T16:46:11.908081+00:00 app[web.1]: 
+2013-04-12T16:46:11.908081+00:00 app[web.1]: : SELECT created_at, sum(price) as price FROM "order
+s"  WHERE (orders.state !='paid' ) AND ("orders"."created_at" BETWEEN '2013-03-12 00:00:00.000000' AND '2013-04-12 23:59:59.999999') GROUP BY date(created_at) ORDER BY orders.created_at):
+2013-04-12T16:46:11.908081+00:00 app[web.1]: LINE 1: SELECT created_at, sum(price) as price FROM "orders"  WHERE ...
+2013-04-12T16:46:11.908081+00:00 app[web.1]:                ^
+2013-04-12T16:46:11.908081+00:00 app[web.1]:     13:     	name: "<%= name %>",
+2013-04-12T16:46:11.908081+00:00 app[web.1]:     14:     	pointInterval: <%= 1.day * 1000 %>,
+2013-04-12T16:46:11.908081+00:00 app[web.1]:     15:       pointStart: <%= 1.month.ago.at_midnight.to_i * 1000 %>,
+2013-04-12T16:46:11.908081+00:00 app[web.1]:     17:     },
+2013-04-12T16:46:11.908081+00:00 app[web.1]:     16:       data: <%= orders_chart_series(orders,1.month.ago.at_midnight)%>
+2013-04-12T16:46:11.908332+00:00 app[web.1]:     18:     <% end %>
+2013-04-12T16:46:11.908332+00:00 app[web.1]:   app/helpers/orders_helper.rb:7:in `each'
+2013-04-12T16:46:11.908332+00:00 app[web.1]:     19: 
+2013-04-12T16:46:11.908332+00:00 app[web.1]:   app/helpers/orders_helper.rb:8:in `block in orders_chart_series'
+2013-04-12T16:46:11.908332+00:00 app[web.1]:   app/helpers/orders_helper.rb:7:in `map'
+2013-04-12T16:46:11.908332+00:00 app[web.1]:   app/helpers/orders_helper.rb:7:in `orders_chart_series'
+2013-04-12T16:46:11.908332+00:00 app[web.1]:   app/views/admins/_order_chart.html.erb:16:in `block in _app_views_admins__order_chart_html_erb___821892737296321810_42960900'
+2013-04-12T16:46:11.908332+00:00 app[web.1]:   app/views/admins/_order_chart.html.erb:12:in `_app_views_admins__order_chart_html_erb___821892737296321810_42960900'
+2013-04-12T16:46:11.908332+00:00 app[web.1]:   app/views/admins/_order_chart.html.erb:12:in `each'
+2013-04-12T16:46:11.908332+00:00 app[web.1]:   app/admin/dashboard.rb:15:in `block (6 levels) in <top (required)>'
+2013-04-12T16:46:11.908554+00:00 app[web.1]:   app/admin/dashboard.rb:12:in `block (3 levels) in <top (required)>'
+2013-04-12T16:46:11.908554+00:00 app[web.1]:   app/admin/dashboard.rb:13:in `block (4 levels) in <top (required)>'
+2013-04-12T16:46:11.908554+00:00 app[web.1]:   app/admin/dashboard.rb:14:in `block (5 levels) in <top (required)>'
+2013-04-12T16:46:11.908554+00:00 app[web.1]: Processing by Admin::DashboardController#index as HTML
+2013-04-12T16:46:11.908554+00:00 app[web.1]:   app/admin/dashboard.rb:9:in `block (2 levels) in <top (required)>'
+2013-04-12T16:46:11.908554+00:00 app[web.1]:   Rendered admins/_order_chart.html.erb (3.7ms)
+2013-04-12T16:46:11.908554+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/activeadmin-0.6.0/app/views/active_admin/page/index.html.arb (21.9ms)
+2013-04-12T16:46:11.908554+00:00 app[web.1]: 
+2013-04-12T16:46:11.908554+00:00 app[web.1]: Completed 500 Internal Server Error in 25ms
+2013-04-12T16:46:11.908554+00:00 app[web.1]: 
+2013-04-12T16:46:11.911278+00:00 heroku[router]: at=info method=GET path=/admin host=osh-designs.herokuapp.com fwd="85.65.217.107" dyno=web.1 connect=0ms service=47ms status=500 bytes=643

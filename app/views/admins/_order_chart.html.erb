@@ -3,10 +3,16 @@
   $(function () {
     new Highcharts.Chart({
          chart: { renderTo: 'orders_chart' },
-    title: { text: 'Orders by Day' },
+    title: { text: 'Orders by Day Created' },
     xAxis: { type: 'datetime' },
     yAxis: {
       title: { text: 'Shkalim'}
+    },
+    tooltip: {
+      formatter: function () {
+        return Highcharts.dateFormat("%B %e %Y", this.x) + ': ' +
+          '₪' + Highcharts.numberFormat(this.y, 2);
+      }
     },
     series: [
     <% {"Unpaid" => Order.unpaid , "Paid" => Order.paid }.each do |name,orders| %>{
