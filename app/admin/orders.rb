@@ -32,7 +32,8 @@ end
 
   column :order_type
   column "State" , :sortable => :state do |order|
-      status_tag(order.state)
+      # status_tag(order.state)
+      render 'admins/order_state_change'  , :order => order
   end
   column "Price" ,:sortable => :price do |order|
     number_to_currency order.price , :unit =>  "&#8362;"

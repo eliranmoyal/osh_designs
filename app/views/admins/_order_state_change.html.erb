@@ -1,0 +1,4 @@
+<%= form_for order ,:url => "/admin/orders/#{order.id}" ,:class=> "change_state_form" do |f| %>
+    <%= f.select :state, ["unwatched" , "in progress" ,"completed" , "paid"] ,:selected => order.state %>
+    <%= f.submit "Change" %>
+    <% end %>
