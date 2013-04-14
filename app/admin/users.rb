@@ -67,7 +67,7 @@ ActiveAdmin.register User do
 			
 			row("Total Orders") { user.orders.count }
 			if user.orders.any?
-				last_order =   user.orders.sort_by{|x| x.created_at}.first
+				last_order =   user.orders.sort_by{|x| - x.created_at.to_i}.first
 				row("Last Order") {link_to  last_order.title , admin_order_path(last_order)}
 				row("Total Value") { number_to_currency user.orders.sum(:price)  , :unit =>  "&#8362;"}
 			end
