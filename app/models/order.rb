@@ -4,7 +4,7 @@ class Order < ActiveRecord::Base
 	belongs_to :user
 	validates :user_id, presence: true
 	attr_accessor :accessible
-	default_scope order: 'orders.created_at'
+	# default_scope order: 'orders.created_at'
 	scope :in_progress  , where("orders.state ='in progress' ")
 	scope :unwatched  , where("orders.state ='unwatched' ")
 	scope :completed  , where("orders.state ='completed' ")

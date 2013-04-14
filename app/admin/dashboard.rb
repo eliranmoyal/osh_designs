@@ -19,7 +19,7 @@ ActiveAdmin.register_page "Dashboard" do
 
 column do
     panel "5 Recent Orders" do
-        table_for Order.order('created_at desc').limit(5) do |order|
+        table_for Order.order("created_at DESC").limit(5) do |order|
             column("title") {|order| link_to(order.title, admin_order_path(order))}
              column("state")   {|order| status_tag(order.state)     }
              column("client"){|order| link_to(order.user.name, admin_user_path(order.user)) } 
@@ -35,7 +35,7 @@ end
      #       table_for Order.order('id desc').limit(10) do |order|
      #         column("state")   {|order| status_tag(order.state)     
      #         end #ends table
-     #     end #ends panel
+    #     end #ends panel
      # end #ends column
 
 
