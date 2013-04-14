@@ -9,7 +9,7 @@ ActiveAdmin.register User do
 	index do
 		selectable_column
 		column "Name" , :sortable => :name do |user|
-			link_to user.name , resource_path(user)
+			link_to user.name , admin_user_path(user)
 		end
 		column :email
 		column :phone
@@ -52,6 +52,7 @@ ActiveAdmin.register User do
 		attributes_table_for user do 
 			row("Name") {user.name}
 			row("Email") {user.email}
+			row("Phone") {user.phone}
 			if user.provider == "facebook"
 				row("Facebook") {link_to user.name, "http://www.facebook.com/#{user.uid}"}
 			end

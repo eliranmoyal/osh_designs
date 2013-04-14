@@ -59,6 +59,13 @@ end
 
 end
 
+
+member_action :complete, :method => :get do
+      @order = Order.find(params[:id])
+        render 'admins/order_submit' 
+      # redirect_to {:action => :show}, {:notice => "Locked!"}
+    end
+
 #override controller
 controller do
       # This code is evaluated within the controller class
