@@ -26,7 +26,7 @@ ActiveAdmin.register User do
 		end
 		column "In Debt Of" do |user|
 			sum_not_paid = user.orders.select{|order| order.state != "paid" && order.price !=nil}
-							.sum{|order| order.price}
+			.sum{|order| order.price}
 
 			number_to_currency sum_not_paid, :unit =>  "&#8362;"	
 		end
@@ -35,6 +35,7 @@ ActiveAdmin.register User do
 	end
 
 	show :title => :name do
+		
 		panel "Orders" do
 			table_for(user.orders) do
 				column :id 
@@ -45,6 +46,8 @@ ActiveAdmin.register User do
 				column("Price")                   {|order| number_to_currency order.price , :unit =>  "&#8362;"}
 			end
 		end
+		
+		
 		active_admin_comments
 	end
 
@@ -61,10 +64,14 @@ ActiveAdmin.register User do
 
 	sidebar "Order History", :only => :show do
 		attributes_table_for user do
-			last_order =   user.orders.sort_by{|x| x.created_at}.first
-			row("Last Order") {link_to  last_order.title , admin_order_path(last_order)}
+			
 			row("Total Orders") { user.orders.count }
-			row("Total Value") { number_to_currency user.orders.sum(:price)  , :unit =>  "&#8362;"}
+			if user.orders.any?
+				last_order =   user.orders.sort_by{|x| x.created_at}.first
+				row("Last Order") {link_to  last_order.title , admin_order_path(last_order)}
+				row("Total Value") { number_to_currency user.orders.sum(:price)  , :unit =>  "&#8362;"}
+			end
+			
 		end
 	end
 
