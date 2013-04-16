@@ -1,2 +1,20 @@
-<%= "Submiting Order #{@order.title}" %>
-<h1>In Construction</h1>
+<h2><%= "Submiting Order #{@order.title}" %></h2>
+ <% if @order.image? %>
+ 	<h3> Already Submitted: </h3>
+	<%= link_to image_tag(@order.image_url(:thumb)), @order.image_url ,:target =>"_blank"  %>
+	<br>
+	<br>
+	<h3>If u want to change:</h3>
+<% end %>
+
+
+<%= form_for @order, :url => "/admin/orders/#{@order.id}", :html => {:multipart => true} do |f| %>
+  <p>
+    <%= f.file_field :image %>
+  </p>
+  <p>
+    <%= f.label :remote_image_url, "or image URL" %><br />
+    <%= f.text_field :remote_image_url %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

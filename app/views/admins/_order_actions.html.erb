@@ -1,5 +1,9 @@
 <%= link_to "Edit", edit_admin_order_path(order) %> <br>
-<%= link_to "Submit Work", complete_admin_order_path(order)  %>
+<% if order.image? %>
+	<%= link_to "Edit  Work", complete_admin_order_path(order)  %>
+<% else %>
+	<%= link_to "Submit Work", complete_admin_order_path(order)  %>
+<% end %>
 <%= link_to(I18n.t('active_admin.delete'), resource_path(order), :method => :delete, :data => {:confirm => I18n.t('active_admin.delete_confirmation')}, :class => "member_link delete_link") %>
 
 

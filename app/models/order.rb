@@ -2,6 +2,8 @@ class Order < ActiveRecord::Base
 
 	attr_accessible :description, :expected_end, :percentage, :price, :state, :order_type , :title
 	belongs_to :user
+	mount_uploader :image, ImageUploader
+	
 	validates :user_id, presence: true
 	attr_accessor :accessible
 	# default_scope order: 'orders.created_at'

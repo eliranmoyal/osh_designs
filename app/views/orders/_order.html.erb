@@ -25,7 +25,13 @@
  			<b>Description</b>: 
  			<br>
  			<%= order.description %>
+ 			<% if order.image? %>
+ 			<b>Submitted Work By Designer</b>: 
+ 			<br>
+ 			<%= link_to image_tag(order.image_url(:thumb)), order.image_url ,:target =>"_blank"  %>
+ 			<% end %>
  		</div>
+
  		
  		<div class="progress progress-striped">
  			<div class="bar bar-success" style="width: <%= order.state != "unwatched" ? order.percentage  : 0%>%;"></div>

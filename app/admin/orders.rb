@@ -22,9 +22,9 @@ scope :paid
 index do
   column :id 
 
-column "Order Date" ,:sortable => :created_at do |order|
-  order.created_at.strftime(" %d/%m/%Y")
-end
+  column "Order Date" ,:sortable => :created_at do |order|
+    order.created_at.strftime(" %d/%m/%Y")
+  end
 
   column "Title" , :sortable => :title do |order|
     link_to order.title , resource_path(order) 
@@ -34,35 +34,35 @@ end
   column "State" , :sortable => :state do |order|
       # status_tag(order.state)
       render 'admins/order_state_change'  , :order => order
-  end
-  column "Price" ,:sortable => :price do |order|
-    number_to_currency order.price , :unit =>  "&#8362;"
-  end
-  column "Progress" , :sortable => :percentage do |order|
-    "#{order.percentage}%"
-  end
-  column "Estimated Finsh",:sortable => :expected_end do |order|
-    if order.expected_end.nil?
-      nil
-    else
-    order.expected_end.strftime(" %d/%m/%Y")  
     end
-    
+    column "Price" ,:sortable => :price do |order|
+      number_to_currency order.price , :unit =>  "&#8362;"
+    end
+    column "Progress" , :sortable => :percentage do |order|
+      "#{order.percentage}%"
+    end
+    column "Estimated Finsh",:sortable => :expected_end do |order|
+      if order.expected_end.nil?
+        nil
+      else
+        order.expected_end.strftime(" %d/%m/%Y")  
+      end
+
+    end
+
+    column "ordered by" , :sortable => :user_id do |order|
+      link_to order.user.name, admin_user_path(order.user)
+    end
+    column "Actions" do |order|
+      render  'admins/order_actions' , :order => order
+    end
+
   end
 
-  column "ordered by" , :sortable => :user_id do |order|
-    link_to order.user.name, admin_user_path(order.user)
-  end
-  column "Actions" do |order|
-    render  'admins/order_actions' , :order => order
-  end
 
-end
-
-
-member_action :complete, :method => :get do
-      @order = Order.find(params[:id])
-        render 'admins/order_submit' 
+  member_action :complete, :method => :get do
+    @order = Order.find(params[:id])
+    render 'admins/order_submit' 
       # redirect_to {:action => :show}, {:notice => "Locked!"}
     end
 
@@ -82,8 +82,9 @@ controller do
       end
       def update
       	@order = Order.find(params[:id])
-      	@order.update_attributes(params[:order])
-      	redirect_to admin_orders_path 
+        @order.accessible = :all 
+        @order.update_attributes(params[:order])
+        redirect_to admin_orders_path 
       end
     end
 
@@ -117,11 +118,14 @@ controller do
      row ("Orderd At") {order.created_at}
      row :updated_at
      row :description
+     if order.image?
+      row("Image") {link_to image_tag(order.image_url(:thumb)), order.image_url ,:target =>"_blank" }
+    end
 
 
-   end
- end
- active_admin_comments
+  end
+end
+active_admin_comments
 end
 
 

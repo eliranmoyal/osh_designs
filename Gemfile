@@ -13,6 +13,9 @@ gem 'omniauth-facebook' , '1.4.1'
 gem 'certified' , '0.1.1'
 gem 'activeadmin'
 
+gem "rmagick"
+gem "carrierwave"
+
 group :development, :test do
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.13.0'
