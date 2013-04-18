@@ -9,7 +9,7 @@ gem 'bootstrap-will_paginate', '0.0.6'
 gem 'jquery-rails', '2.0.2'
 gem 'devise' , '2.2.3'
 gem 'omniauth', '1.1.3'
-gem 'omniauth-facebook' , '1.4.1'
+gem 'omniauth-facebook' , '1.4.0'
 gem 'certified' , '0.1.1'
 gem 'activeadmin'
 
