@@ -19,8 +19,14 @@ class OrdersController < ApplicationController
   end
 
   def destroy
+    notice =  "order cancelation sent to designer"
+    if @order.cancel
+       @order.update_attributes(:cancel=>false)
+       notice = "order cacneletion has been canceld"
+    else
    @order.update_attributes(:cancel=>true)
-   redirect_to current_user, :notice => "order cancelation sent to designer"
+ end
+   redirect_to current_user, :notice =>notice
   end
 
   def new

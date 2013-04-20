@@ -46,6 +46,7 @@ div.headTitle {
 
 // order show
 a.trash {
+  float:right;
   background-image: url('/assets/trash2.png');
   text-indent:-9999px;
   width: 20px;
@@ -54,7 +55,10 @@ a.trash {
   }
 }
 
-.trash {
+.trashX {
+  background-image: url('/assets/trash_X.png');
+  text-indent:-9999px;
+  width: 20px;
   float:right;
 }
 //order form
