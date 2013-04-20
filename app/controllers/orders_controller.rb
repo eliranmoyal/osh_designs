@@ -19,8 +19,8 @@ class OrdersController < ApplicationController
   end
 
   def destroy
-   @order.destroy
-   redirect_to current_user, :notice => "order deleted"
+   @order.update_attributes(:cancel=>true)
+   redirect_to current_user, :notice => "order cancelation sent to designer"
   end
 
   def new

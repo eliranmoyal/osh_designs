@@ -17,6 +17,7 @@ scope :unwatched
 scope :in_progress
 scope :completed
 scope :paid
+scope :request_to_cancel
 
 
 index do

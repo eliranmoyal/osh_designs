@@ -1,6 +1,6 @@
 class Order < ActiveRecord::Base
 
-	attr_accessible :description, :expected_end, :percentage, :price, :state, :order_type , :title
+	attr_accessible :description, :expected_end, :percentage, :price, :state, :order_type , :title,:cancel
 	belongs_to :user
 	mount_uploader :image, ImageUploader
 	
@@ -12,7 +12,7 @@ class Order < ActiveRecord::Base
 	scope :completed  , where("orders.state ='completed' ")
 	scope :paid  , where("orders.state ='paid' ")
 	scope :unpaid , where("orders.state !='paid' ")
-
+	scope :request_to_cancel , where(cancel: true)
 
 	def self.total_on(date)
 		where("date(created_at) = ?",date).sum(:price)

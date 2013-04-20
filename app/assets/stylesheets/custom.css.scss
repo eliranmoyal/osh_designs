@@ -46,7 +46,6 @@ div.headTitle {
 
 // order show
 a.trash {
-  float: right;
   background-image: url('/assets/trash2.png');
   text-indent:-9999px;
   width: 20px;
@@ -55,6 +54,9 @@ a.trash {
   }
 }
 
+.trash {
+  float:right;
+}
 //order form
 textarea#orderDescription {
   width: 366px;

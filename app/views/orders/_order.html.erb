@@ -5,9 +5,14 @@
  				<%= image_tag("right.png", alt: "more-info",size:"18x18",:id=>"buttonimg#{order.id}") %>
  			</a>
  			<% if current_user  == order.user %>
-	 			<%= link_to "DE", order, method: :delete,
-	 			data: { confirm: 'You sure?' },
-	 			title: order.title , class:"trash" %>
+ 				<% if !order.cancel  %>
+		 			<%= link_to "DE", order, method: :delete,
+		 			data: { confirm: 'You sure?' },
+		 			title: order.title , class:"trash" %>
+	 			<% else %>
+	 				<%= image_tag("trash_X.png", alt: "requested to cancel", class: "trash" ) %>
+	 			<% end %>
+
  			<% end %>
  		</p>
 
@@ -25,6 +30,7 @@
  			<b>Description</b>: 
  			<br>
  			<%= order.description %>
+ 			<br>
  			<% if order.image? %>
  			<b>Submitted Work By Designer</b>: 
  			<br>
