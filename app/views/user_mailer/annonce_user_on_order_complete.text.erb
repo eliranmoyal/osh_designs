@@ -1,0 +1,11 @@
+Dear Admin, 
+An order had been placed on your site
+
+Ordered By: 
+<%= @order.user.name %>
+Email: <%= @order.user.email %> , Phone: <%= @order.user.phone %>
+
+Order Details: 
+Title : <%= @order.title%> 
+Type : <%= @order.order_type %>
+Description: <%= @order.description %>

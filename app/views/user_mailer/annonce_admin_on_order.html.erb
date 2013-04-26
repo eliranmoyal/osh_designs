@@ -1,0 +1,12 @@
+<h2>Dear Admin, </h2>
+<p>An order had been placed on your site</p>
+
+<p>Ordered By: 
+<%= @order.user.name %> 
+Email: <%= @order.user.email %> , Phone: <%= @order.user.phone %>
+</p>
+
+Order Details: 
+<p>Title : <%= @order.title%> </p>
+<p>Type : <%= @order.order_type %></p>
+<p>Description: <%= @order.description %></p>

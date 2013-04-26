@@ -1,0 +1,17 @@
+<%= @order.user.name %>, 
+Your order : <%= @order.title %>
+Has been completed!
+
+Your Work is attached below
+You can also visit this link for your work:
+<%= @order.image_url %>
+
+<% if @order.state != "paid" %>
+	You Should Pay Designer :
+	<%= number_to_currency @order.price    , :unit =>  "&#8362;" %>
+<% end %>
+
+thanks for ordering,
+contact us for any questions
+
+ArtiPixel Team

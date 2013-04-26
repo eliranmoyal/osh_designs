@@ -8,6 +8,7 @@ class OrdersController < ApplicationController
     @order = current_user.orders.build(params[:order])
     if @order.save
       flash[:success] = "Order created!"
+      UserMailer.annonce_admin_on_order(@order).deliver
       redirect_to current_user
     else
       render 'orders/new'

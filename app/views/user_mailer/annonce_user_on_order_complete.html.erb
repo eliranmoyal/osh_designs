@@ -1,0 +1,18 @@
+<h2><%= @order.user.name %>, </h2>
+<p>Your order : <%= @order.title %></p>
+<p>Has been completed!</p>
+
+<p>Your Work is attached below</p>
+<p>You can also visit this link for your work:
+<%= @order.image_url %>
+</p>
+
+<% if @order.state != "paid" %>
+	<p>You Should Pay Designer :
+	<%= number_to_currency @order.price    , :unit =>  "&#8362;" %></p>
+<% end %>
+
+<p>thanks for ordering,</p>
+<p>contact us for any questions</p>
+
+<p>ArtiPixel Team</p>
