@@ -85,7 +85,7 @@ controller do
       	@order = Order.find(params[:id])
         @order.accessible = :all 
         @order.update_attributes(params[:order])
-        if params[:order].include?(:image) && !@order.image_url.blank?
+        if (params[:order].include?(:image) || params[:order].include?(:remote_image_url)) && !@order.image_url.blank?
           UserMailer.annonce_user_on_order_complete(@order).deliver
         end
         redirect_to admin_orders_path 
