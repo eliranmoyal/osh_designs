@@ -17,6 +17,8 @@ gem "rmagick"
 gem "carrierwave"
 gem 'fog'
 
+gem 'right-rails'
+
 group :development, :test do
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.13.0'

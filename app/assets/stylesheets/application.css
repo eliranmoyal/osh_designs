@@ -11,3 +11,11 @@
  *= require_self
  *= require_tree .
  */
+
+
+div.rui-rte-editor {
+  width: 380px;
+}
+div.rui-rte-toolbar {
+  width: 380px;
+}

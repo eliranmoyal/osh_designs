@@ -121,7 +121,7 @@ controller do
      row ("Estimated Finish") {order.expected_end}
      row ("Orderd At") {order.created_at}
      row :updated_at
-     row :description
+     row ("Description") {raw(order.description)}
      if order.image?
       row("Image") {link_to image_tag(order.image_url(:thumb)), order.image_url ,:target =>"_blank" }
     end
