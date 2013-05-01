@@ -9,4 +9,4 @@ Email: <%= @order.user.email %> , Phone: <%= @order.user.phone %>
 Order Details: 
 <p>Title : <%= @order.title%> </p>
 <p>Type : <%= @order.order_type %></p>
-<p>Description: <%= @order.description %></p>
+<p>Description: <%= raw(@order.description) %></p>

@@ -8,10 +8,9 @@
 	<p><b> Choose The Order Type</b></p>
 	<%= f.select :order_type, ["Banner" , "Logo" ,  "Web Site"] %>
 	<br>
-	  <p class="required">
-    		<%= f.label :description %>
-    <%= f.rte_field :description, :toolbar => 'basic', :rows => 8, :cols => 80 , :style => "width:365px;" %>
-  </p>
+	<p><b>Enter Detailed Description</b></p>
+    	<%= f.rte_field :description, :toolbar => 'basic', :rows => 8, :cols => 80 , :style => "width:365px;" %>
+	<br>
 	<br>
 	<%= f.submit "Order", class: "btn btn-large btn-warning  btn-block" %>
 	<% end %>
