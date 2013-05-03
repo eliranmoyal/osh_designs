@@ -12,6 +12,7 @@ gem 'omniauth', '1.1.3'
 gem 'omniauth-facebook' , '1.4.0'
 gem 'certified' , '0.1.1'
 gem 'activeadmin'
+gem 'thin'
 
 gem "rmagick"
 gem "carrierwave"
