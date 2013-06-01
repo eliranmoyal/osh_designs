@@ -9,4 +9,10 @@ module OrdersHelper
 	# 		order && order.price.to_f || 0
 	# 	end.inspect
 	# end
+
+	
+  def order_types
+    ["Logo","Banner", "Web Site"]
+  end
+
 end
