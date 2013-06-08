@@ -1,5 +1,9 @@
 OshDesigns::Application.routes.draw do
 
+  get "set_language/english"
+
+  get "set_language/hebrew"
+
 root :to => 'pages#home'
   ActiveAdmin.routes(self)
 

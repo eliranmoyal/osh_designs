@@ -3,6 +3,9 @@ class RegistrationsController < Devise::RegistrationsController
 	end
 	def create
 		super
-		UserMailer.register_welcome(current_user).deliver
+		if !current_user.nil?
+			UserMailer.register_welcome(current_user).deliver
+		end
+		
 	end
 end

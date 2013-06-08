@@ -1,0 +1,9 @@
+he:
+  signup:
+    title: הרשמה
+    signupbutton: הרשם
+    name_placeholder:  הכנס שם
+    email_placeholder:   הכנס כתוב דוא\"ל
+    password_placeholder:  צור סיסמה
+    password_confiramtion_placeholder:   הכנס סיסמה שוב
+    

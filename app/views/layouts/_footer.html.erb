@@ -1,0 +1,12 @@
+<footer class="clearfix" >
+
+
+        <div class="lang">
+          <%=  image_tag("he.png", :border => 0) %>
+          <%= link_to_unless I18n.locale == :he, "Hebrew", set_language_hebrew_path %>
+          |
+          <%= image_tag("en.png", :border => 0) %>
+            <%= link_to_unless I18n.locale == :en, "English", set_language_english_path %>
+        </div>
+    
+</footer>

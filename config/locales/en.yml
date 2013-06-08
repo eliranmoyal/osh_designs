@@ -1,5 +1,12 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  signup:
+    title: Sign up
+    signupbutton: Sign Up
+    name_placeholder:  "Your Name"
+    email_placeholder:   "Your Email" 
+    password_placeholder:  "Create Your Password"
+    password_confiramtion_placeholder:   "Put Your Password Again"
+ 
+ 
