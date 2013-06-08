@@ -8,5 +8,11 @@ en:
     email_placeholder:   "Your Email" 
     password_placeholder:  "Create Your Password"
     password_confiramtion_placeholder:   "Put Your Password Again"
- 
- 
+  home:
+    welcome_1st: this is an app to order designs from the designer OSH!
+    welcome_2nd: this app is brought you by eliran:)
+  header:
+   sign_in_button_text: Sign in
+   facebook_sign_in_button_text: Sign in with Facebook
+  words:
+   or: or

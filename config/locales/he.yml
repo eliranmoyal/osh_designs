@@ -6,4 +6,11 @@ he:
     email_placeholder:   הכנס כתוב דוא\"ל
     password_placeholder:  צור סיסמה
     password_confiramtion_placeholder:   הכנס סיסמה שוב
-    
+  home:
+    welcome_1st: זוהי אפליקציה לבקשת הזמנות מהמעצב אוש!
+    welcome_2nd: האפליקציה נוצרה על ידי אלירן:)
+  header:
+    sign_in_button_text: הכנס
+    facebook_sign_in_button_text: הרשם / הכנס באמצעות פייסבוק
+  words:
+    or: או

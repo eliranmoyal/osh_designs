@@ -15,9 +15,10 @@
 			</ul>
 		</div>
 		<% else %>
-		<%= link_to  raw('<i class="icon-user icon-white"></i> Sign in') , new_user_session_path ,
-		:class => "btn btn-primary" %> or
-		<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) , :class => "zocial facebook" %>
+		<% translated_button_text = t('header.sign_in_button_text') %>
+		<%= link_to  raw("<i class=\"icon-user icon-white\"></i>#{translated_button_text} ") , new_user_session_path ,
+		:class => "btn btn-primary" %> <%= t('words.or') %>
+		<%= link_to t('header.facebook_sign_in_button_text'), user_omniauth_authorize_path(:facebook) , :class => "zocial facebook" %>
 		<% end %>
 		
 	</div>
