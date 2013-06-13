@@ -2,8 +2,11 @@
 <html>
 <head>
   <title>ArtiPixel</title>
-  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= stylesheet_link_tag    "application-all", media: "all" %>
   <%= javascript_include_tag "application" %>
+  <% if  I18n.locale == :he%>
+  <%= stylesheet_link_tag    "application-rtl", media: "all" %>
+  <% end %>
   <%= csrf_meta_tags %>
   <script type="text/javascript">if (window.location.href.indexOf('#_=_') > 0) {
     window.location = window.location.href.replace(/#.*/, '');

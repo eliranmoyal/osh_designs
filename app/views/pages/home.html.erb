@@ -1,10 +1,10 @@
 <div class="row">
-	<div class="span6">
+	<div class="span6 home-welcome">
 		<h1> ArtiPixel</h1>
 		<p><%= t('home.welcome_1st') %></p>
 		<p><%= t('home.welcome_2nd') %></p>
 	</div>
-	<div class="span3">
+	<div class="span3 home-buttons">
 		<% if user_signed_in? %>
 		<br>
 		<%= link_to  raw("<i class=\"icon-envelope icon-white\"></i> #{t('home.button_order')}") ,new_order_path ,
