@@ -20,3 +20,9 @@ he:
     toggle_log_out: התנתק
   words:
     or: או
+  order:
+    form_header: צור הזמנה חדשה
+    form_title_placeholder: תן כותרת להזמנה שלך, למשל באנר למסיבה
+    form_ordertype: בחר את סוג ההזמנה
+    form_description: תאר את ההזמנה (אנא פרט ככל האפשר)
+    form_button_text: הזמן

@@ -1,21 +1,21 @@
-
+<div class="row">
 <div class="span5">
-	<h1>Create New Order</h1>
+	<h1><%= t('order.form_header') %></h1>
 	<br>
 	<%= form_for(@order) do |f| %>
-	<%= f.text_field :title, placeholder: "Title your order (i.e very large logo)" %>
+	<%= f.text_field :title, placeholder: t('order.form_title_placeholder')%>
 	<br>
-	<p><b> Choose The Order Type</b></p>
+	<p><b> <%= t('order.form_ordertype') %></b></p>
 	<%= f.select :order_type,
 
 	order_types %>
 	<br>
-	<p><b>Enter Detailed Description</b></p>
+	<p><b><%= t('order.form_description') %></b></p>
     	<%= f.rte_field :description, :toolbar => 'basic', :rows => 8, :cols => 80 , :style => "width:365px;" %>
 	<br>
 	<br>
 
-	<%= f.submit "Order", class: "btn btn-large btn-warning  btn-block" %>
+	<%= f.submit t('order.form_button_text'), class: "btn btn-large btn-warning  btn-block" %>
 	<% end %>
 
 
@@ -60,4 +60,6 @@
 
 
 	</div>
+</div>
+
 </div>
