@@ -5,7 +5,17 @@ float:right;
 text-align: right;
 }
 
-.home-buttons{
+ .order-form
+{
+float:right;
+text-align: right;
+}
+.order-types {
+float:left;
+text-align: right;
+}
+
+.home-buttons {
 float:left;
 }
 
