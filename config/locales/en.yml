@@ -22,8 +22,16 @@ en:
    toggle_log_out: Sign Out
   words:
    or: or
+   price_range: Price Range
+   work_days: Work Days
   order:
    form_header: Create New Order
    form_title_placeholder: "Title your order (i.e very large logo)"
    form_ordertype: Choose The Order Type
    form_description: Enter Detailed Description
+   form_button_text: Order
+   order_types:
+      title: Order Types
+      banner_name: Banner
+      logo_name: Logo
+      web_site_name: Web Site

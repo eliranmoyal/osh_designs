@@ -20,9 +20,16 @@ he:
     toggle_log_out: התנתק
   words:
     or: או
+    price_range: טווח מחירים
+    work_days: ימי עבודה
   order:
     form_header: צור הזמנה חדשה
     form_title_placeholder: תן כותרת להזמנה שלך, למשל באנר למסיבה
     form_ordertype: בחר את סוג ההזמנה
     form_description: תאר את ההזמנה (אנא פרט ככל האפשר)
     form_button_text: הזמן
+    order_types:
+      title: סוגי הזמנות
+      banner_name: באנר
+      logo_name: לוגו
+      web_site_name: אתר
