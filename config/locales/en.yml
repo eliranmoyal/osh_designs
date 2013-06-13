@@ -11,8 +11,14 @@ en:
   home:
     welcome_1st: this is an app to order designs from the designer OSH!
     welcome_2nd: this app is brought you by eliran:)
+    button_order: Create new order now!
+    button_profile: Go To Your Profile!
   header:
    sign_in_button_text: Sign in
    facebook_sign_in_button_text: Sign in with Facebook
+   toggle_main: חשבון
+   toggle_profile_link: לפרופיל
+   toggle_profile_settings: הגדרות
+   toggle_log_out: התנתק
   words:
    or: or

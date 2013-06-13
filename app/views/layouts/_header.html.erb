@@ -3,20 +3,19 @@
 		<% if user_signed_in? %>
 		<div id="fat-menu" class="dropdown">
 			<a href="#" class=" btn dropdown-toggle" data-toggle="dropdown">
-				Account <b class="caret"></b>
+				<%= t('header.toggle_main') %> <b class="caret"></b>
 			</a>
 			<ul class="dropdown-menu">
-				<li><%= link_to "Profile",current_user %></li>
-				<li><%= link_to "Settings", edit_user_registration_path(current_user) %></li>
+				<li><%= link_to t('header.toggle_profile_link'),current_user %></li>
+				<li><%= link_to t('header.toggle_profile_settings'), edit_user_registration_path(current_user) %></li>
 				<li class="divider"></li>
 				<li>
-					<%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
+					<%= link_to t('header.toggle_log_out'), destroy_user_session_path, method: "delete" %>
 				</li>
 			</ul>
 		</div>
 		<% else %>
-		<% translated_button_text = t('header.sign_in_button_text') %>
-		<%= link_to  raw("<i class=\"icon-user icon-white\"></i>#{translated_button_text} ") , new_user_session_path ,
+		<%= link_to  raw("<i class=\"icon-user icon-white\"></i>#{ t('header.sign_in_button_text')} ") , new_user_session_path ,
 		:class => "btn btn-primary" %> <%= t('words.or') %>
 		<%= link_to t('header.facebook_sign_in_button_text'), user_omniauth_authorize_path(:facebook) , :class => "zocial facebook" %>
 		<% end %>

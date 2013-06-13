@@ -9,8 +9,14 @@ he:
   home:
     welcome_1st: זוהי אפליקציה לבקשת הזמנות מהמעצב אוש!
     welcome_2nd: האפליקציה נוצרה על ידי אלירן:)
+    button_order: צור הזמנה חדשה
+    button_profile: כנס לפרופיל
   header:
     sign_in_button_text: הכנס
     facebook_sign_in_button_text: הרשם / הכנס באמצעות פייסבוק
+    toggle_main: חשבון
+    toggle_profile_link: פרופיל
+    toggle_profile_settings: הגדרות
+    toggle_log_out: התנתק
   words:
     or: או
