@@ -5,7 +5,7 @@ float:right;
 text-align: right;
 }
 
- .order-form
+ .order-form 
 {
 float:right;
 text-align: right;
@@ -15,11 +15,60 @@ float:left;
 text-align: right;
 }
 
+
+.signin-page
+{
+float:right;
+text-align: right;
+}
+
 .home-buttons {
 float:left;
 }
 
+.alert {
+	text-align: right;
+}
+
 .footer {
 	margin-bottom: 30px;
+	float: right;
+}
+
+.dropdown {
+	text-align: right;
+	direction: rtl;
+}
+
+
+#order_title {
+	text-align: right;
+}
+
+#order_order_type {
+	direction: rtl;
+}
+
+#user_name{
+	text-align: right;
+}
+
+#user_email {
+	text-align: right;
+}
+
+#user_password {
+	text-align: right;
+}
+
+#user_password_confirmation {
+	text-align: right;
+}
+
+div.signup h2 {
+	text-align: right;
+}
+
+.signup {
 	float: right;
 }

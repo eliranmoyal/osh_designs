@@ -8,6 +8,16 @@ en:
     email_placeholder:   "Your Email" 
     password_placeholder:  "Create Your Password"
     password_confiramtion_placeholder:   "Put Your Password Again"
+  signin:
+    title: Sign In
+    sign_in_button_text: Sign in
+  devise:
+    links: 
+      signin_link: Sign in
+      signup_link: Sign up
+      password_forogot_link:  "Forgot your password?"
+      confirmations_instructions_link: "Didn't receive confirmation instructions?"
+      provider_link: Sign in with 
   home:
     welcome_1st: this is an app to order designs from the designer OSH!
     welcome_2nd: this app is brought you by eliran:)
@@ -24,6 +34,9 @@ en:
    or: or
    price_range: Price Range
    work_days: Work Days
+   email: Email
+   password: Password
+   remember_me: Remember me
   order:
    form_header: Create New Order
    form_title_placeholder: "Title your order (i.e very large logo)"
@@ -35,3 +48,4 @@ en:
       banner_name: Banner
       logo_name: Logo
       web_site_name: Web Site
+

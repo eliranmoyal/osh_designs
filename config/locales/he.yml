@@ -6,9 +6,12 @@ he:
     email_placeholder:   הכנס כתוב דוא\"ל
     password_placeholder:  צור סיסמה
     password_confiramtion_placeholder:   הכנס סיסמה שוב
+  signin:
+    title: כניסה
+    sign_in_button_text: הכנס
   home:
-    welcome_1st: זוהי אפליקציה לבקשת הזמנות מהמעצב אוש!
-    welcome_2nd: האפליקציה נוצרה על ידי אלירן:)
+    welcome_1st: "!זוהי אפליקציה לבקשת הזמנות מהמעצב אוש"
+    welcome_2nd:  "(: האפליקציה נוצרה על ידי אלירן"
     button_order: צור הזמנה חדשה
     button_profile: כנס לפרופיל
   header:
@@ -22,14 +25,66 @@ he:
     or: או
     price_range: טווח מחירים
     work_days: ימי עבודה
+    email: אימייל
+    password: סיסמה
+    remember_me: זכור אותי
   order:
     form_header: צור הזמנה חדשה
     form_title_placeholder: תן כותרת להזמנה שלך, למשל באנר למסיבה
     form_ordertype: בחר את סוג ההזמנה
-    form_description: תאר את ההזמנה (אנא פרט ככל האפשר)
+    form_description: (תאר את ההזמנה (אנא פרט ככל האפשר
     form_button_text: הזמן
     order_types:
       title: סוגי הזמנות
       banner_name: באנר
       logo_name: לוגו
       web_site_name: אתר
+  devise:
+    links: 
+      signin_link: הכנס
+      signup_link: הרשם
+      password_forogot_link: ?שכחת את סיסמתך
+      confirmations_instructions_link: ?לא קיבלת הוראות אימות
+      provider_link: התחבר דרך
+    confirmations:
+      confirmed: חשבונך אושר בהצלחה. כעת הנך מחובר/ת.
+      send_instructions: בדקות הקרובות יגיע אליך אימייל עם הנחיות כיצד לאשר את הרשמתך.
+      send_paranoid_instructions: אם האימייל שלך נמצא במאגר נתונים שלנו, נשלח לך אימייל עם הוראות כיצד לאשר את החשבון שלך בעוד כמה דקות.
+    failure:
+      already_authenticated: את/ה כבר מחובר/ת
+      inactive: חשבונך טרם הופעל.
+      invalid: כתובת אימייל או סיסמא שגויה.
+      invalid_token: מזהה התחברות שגוי.
+      locked: חשבונך ננעל.
+      not_found_in_database: כתובת אימייל או סיסמא לא תקינה
+      timeout: פג תוקף החיבור לאתר, אנא התחבר מחדש.
+      unauthenticated: עליך להתחבר או להרשם על-מנת להמשיך.
+      unconfirmed: עליך לאשר את הרשמתך לפני שתוכל להמשיך.
+    mailer:
+      confirmation_instructions:
+        subject: הוראות לאישור הרשמה
+      reset_password_instructions:
+        subject: הוראות לאיפוס סיסמא
+      unlock_instructions:
+        subject: הוראות להסרת נעילה
+    omniauth_callbacks:
+      failure: 
+      success: 
+        passwords:
+          no_token: אינך יכול/ה לגשת לעמוד זה אם לא הופנת מאימייל לשינוי סיסמא. אם את/ה כן מגיע משם, אנא ודא/י שהשתמשת בכתובת אינטרנט המלאה.
+          send_instructions: בדקות הקרובות יגיע אליך אימייל עם הנחיות כיצד לאפס את סיסמתך.
+          send_paranoid_instructions: אם האימייל שלך קיים במאגר, אנו נשלח לך לינק לחידוש סיסמא באימייל.
+          updated: סיסמתך שונתה בהצלחה. כעת הנך מחובר/ת.
+          updated_not_active: הסיסמא שלך שונתה בהצלחה.
+    registrations:
+      destroyed: חשבונך נמחק בהצלחה. מקווים לראותך בעתיד.
+      signed_up: נרשמת בהצלחה. אם נדרש, יישלח אליך אימייל לאישור הרשמתך.
+      signed_up_but_inactive: ההרשמה בוצעה בהצלחה, אך לא יכולנו להכניס אותך למערכת מכיוון שעוד לא הפעלת את חשבונך
+      signed_up_but_locked: ההרשמה בוצעה בהצלחה, אך לא יכולנו להכניס אותך למערכת מכיוון שחשבונתך נעול.
+      signed_up_but_unconfirmed: הודעה עם לינק לאישור חשבונך נשלח לאימייל שלך. אנא פתח/י את הלינק על מנת להפעיל את חשבונך.
+      update_needs_confirmation: עידכנת את חשבונך בהצלחה, אבל אנחנו צריכים לאשר את האימייל החדש שלך. אנא בדק/י את האימייל שלך ולחצ/י על הלינק על מנת לאשר את חשבון האימייל החדש.
+      updated: עדכנת בהצלחה את חשבונך.
+    sessions:
+      signed_in: התחברת בהצלחה
+      signed_out: .התנתקת בהצלחה
+      

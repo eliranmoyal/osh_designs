@@ -7,7 +7,7 @@
 	<div class="span3 home-buttons">
 		<% if user_signed_in? %>
 		<br>
-		<%= link_to  raw("<i class=\"icon-envelope icon-white\"></i> #{t('home.button_order')}") ,new_order_path ,
+	<%= link_to  raw("<i class=\"icon-envelope icon-white\"></i> #{t('home.button_order')}") ,new_order_path ,
 		:class => "btn btn-large btn-warning  btn-block" %>
 		<br>
 		<%= link_to raw("<i class=\"icon-user icon-white\"></i>  #{t('home.button_profile')}") ,current_user,

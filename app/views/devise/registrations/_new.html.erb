@@ -1,3 +1,5 @@
+
+<div class="signup">
 <h2> <%= t('signup.title') %></h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
@@ -14,4 +16,7 @@
 <div><%= f.submit  t('signup.signupbutton'), :class => 'btn btn-large btn-block btn-primary' %></div>
 
 <% end %>
+
+
+</div>
 
