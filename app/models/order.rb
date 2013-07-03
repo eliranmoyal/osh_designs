@@ -1,6 +1,7 @@
 class Order < ActiveRecord::Base
 
-	attr_accessible :description, :order_type , :title,:cancel
+	attr_accessible :description, :order_type , :title,:cancel 
+	belongs_to :category
 	belongs_to :user
 	mount_uploader :image, ImageUploader
 	

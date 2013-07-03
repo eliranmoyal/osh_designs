@@ -7,9 +7,7 @@
 	<%= f.text_field :title, placeholder: t('order.form_title_placeholder')%>
 	<br>
 	<p><b> <%= t('order.form_ordertype') %></b></p>
-	<%= f.select :order_type,
-
-	order_types %>
+	<%= f.select :order_type, order_types %>
 	<br>
 	<p><b><%= t('order.form_description') %></b></p>
 <%= f.rte_field :description, :toolbar => 'basic', :rows => 8, :cols => 80 , :style => "width:365px;" %>
